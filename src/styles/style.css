@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour:BLED,SCAN@0..100,-53..100&display=swap");
+
+:root {
+    --font-family: "Sixtyfour", sans-serif;
+    --font-size-root: 62.5%; /* (10px) for easier rem calculation*/
+    --font-size-reguler: 1.6rem; /* (16px) actual font size */
+    --font-size-title: 5.2rem;
+    --color-main: #a8a3ff;
+    --color-main-bg: #1e1e1e;
+    --color-secondary-bg: #252238;
+    --color-light: #cacaca;
+    --color-dim: #999999;
+    --color-border: #616161;
+    --color-btn-bg: #3a484f;
+    --margin-left-sect: 1.2rem;
+    --margin-btwn-sect: 22rem;
+    --margin-btwn-text: 1.2rem;
+    --margin-indent: 5.6rem;
+    --border: var(--color-border) solid 1px;
+    --color-navbar-blur-top: linear-gradient(var(--color-main-bg), #00000000);
+    --color-navbar-blur-btm: linear-gradient(to top, var(--color-main-bg), #00000000);
+}
+
+/* --- remove default style --- */
+
+body,
+p,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+li {
+    all: unset;
+    display: block;
+}
+
+/* todo: move this to the navbat section*/
+input[type="radio"] {
+    display: none;
+}
+
+/* --- apply new default style ---*/
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-family);
+    font-size: var(--font-size-root);
+    text-wrap: wrap;
+}
+
+body {
+    font-size: var(--font-size-reguler);
+    color: var(--color-main);
+    background: var(--color-main-bg);
+    line-height: 2.8rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+    padding-top: 2.6rem;
+    margin-bottom: 2.6rem;
+}
+
+a {
+    color: var(--color-main);
+}
+
+/* a:hover {
+    color: yellow;
+} */
+
+input[type="text"], input[type="email"], textarea {
+    font-size: var(--font-size);
+    color: var(--color-main);
+    background-color: var(--color-secondary-bg);
+    border: var(--border);
+    padding: 1rem;
+}
+
+::placeholder {
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    color: var(--color-main);
+    opacity: 0.5;
+}
+
+/* --- utils --- */
+
+.btn, .btn-action {
+    all: unset;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.4rem 1.4em;
+}
+
+.btn {
+    color: var(--color-light);
+    background-color: var(--color-btn-bg);
+    border: var(--border);
+}
+
+.btn-action {
+    color: var(--color-main-bg);
+    background-color: var(--color-main);
+}
+
+.btn:hover {
+    background-color: #323f43;
+}
+
+.btn-action:hover {
+    background-color: #9a95f3;
+}
+
+.radio-active {
+    all: unset;
+    cursor: pointer;
+    text-align: center;
+    color: var(--color-main-bg);
+    background-color: var(--color-main);
+    border: none;
+    padding: 1.6rem;
+}
+
+    /* & nesting selector might not work in older devices or browsers */
+.hover-right:hover {
+    transform: translateX(1.6rem);
+    background-color: var(--color-main-bg);
+    & * {
+        color: var(--color-main);
+    }
+}
+
+.cursor-anim {
+    animation: blink 2s ease 0s infinite normal forwards;
+}
+
+@keyframes blink {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+
+/* 🗃️SECT: Navigation Bar */
+
+/* BUG: little gap at bottom */
+.navbar {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    color: var(--color-main-bg);
+    opacity: 95%;
+}
+
+.navbar-bar {
+    display: flex;
+    height: 5.5rem;
+    width: 100%;
+    font-size: 2.4rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-bar span {
+    box-sizing: border-box;
+    background-color: var(--color-main);
+    height: 100%;
+    padding: 1.6rem 1.3rem;
+}
+
+.navbar-bar-empty {
+    width: 100%;
+    height: 50%;
+    margin: 0 0.8rem;
+}
+
+.navbar-bar-burger {
+    all: unset;
+    height: 100%;
+    aspect-ratio : 1 / 1;
+    background-color: red;
+}
+
+.navbar-bar, .navbar-menu {
+    pointer-events:initial;
+}
+
+.navbar-menu {
+    display: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    background-color: var(--color-main);
+    height: 27.6rem;
+    width: 100%;
+    padding: 0.8rem 0 3.2rem 0;
+    margin-bottom: 0.8rem;
+    margin-left: auto;
+}
+
+.navbar-menu li {
+    text-decoration: none;
+    margin-left: 2rem;
+    margin-top: 1.6rem;  
+}
+
+.navbar-menu li a {
+    display: block;
+    text-decoration: none;
+    font-size: 2.4rem;
+    color: var(--color-main-bg);
+}
+
+/* menu toggler logic */
+.menu-toggler {
+    z-index: 1;
+    width: 100%;
+    opacity: 0;
+}
+
+.menu-toggler-label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--color-main);
+    padding: 1.6rem 0;
+}
+
+body:has(.menu-toggler:checked) {
+    & .navbar-menu {
+        display: block;
+    }
+}
+
+.navbar-blur div {
+    z-index: 2;
+    position: fixed;
+    height: 8.8rem;
+    width: 100%;
+}
+
+.navbar-blur-top {
+    top: 0;
+    background: var(--color-navbar-blur-top);
+    backdrop-filter: blur(2.5px);
+}
+
+.navbar-blur-btm {
+    bottom: 0;
+    background: var(--color-navbar-blur-btm);
+    backdrop-filter: blur(1px);
+}
+
+/* 🗃️SECT: Home Section */
+
+.home {
+    margin-left: var(--margin-left-sect);
+    /* height: 100vh; */
+    /* min-height: fit-content; */
+    margin-bottom: calc(var(--margin-btwn-sect) / 1);
+}
+
+.home-title {
+    font-size: var(--font-size-title);
+    letter-spacing: -0.25rem;
+    line-height: 6.4rem;
+}
+
+.home-loading-bit {
+    position: absolute;
+    opacity: 90%;
+    left: 2.8rem;
+    background-color: var(--color-main-bg);
+    animation: sliding 0.7s steps(6, end) 0s infinite forwards;
+}
+
+.home-loading-bit:nth-child(2) { left: 9.2rem; }
+.home-loading-bit:nth-child(3) { left: 15.6rem; }
+
+@keyframes sliding {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(6.4rem);
+	}
+}
+
+
+.home-loading {
+    margin: 4.2rem 0;
+}
+
+.home-text p {
+    margin: 1.2rem 0;
+}
+
+/* 🗃️SECT: About Section */
+
+.about {
+    margin-left: var(--margin-left-sect);
+    margin-bottom: var(--margin-btwn-sect);
+}
+
+.about-img-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    margin-bottom: 3.6rem;
+}
+
+.about-img {
+    filter: saturate(20%) blur(1.5px);
+    opacity: 70%;
+    width: 100%;
+    border-radius: 0.8rem;
+}
+
+.about-img:nth-child(1) {grid-area: 1 / 3 / 3 / 5;}
+.about-img:nth-child(2) {grid-area: 2 / 1 / 6 / 4;}
+.about-img:nth-child(3) {grid-area: 4 / 2 / 8 / 6;}
+
+.about-text {
+    width: 34rem;
+}
+
+.about-text p {
+    margin-bottom: var(--margin-btwn-text);
+}
+
+/* 🗃️SECT: Project Section */
+
+.project {
+    padding-bottom: var(--margin-btwn-sect);
+    margin-left: var(--margin-left-sect);
+}
+
+.project::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.8rem;
+    background-image: url(https://res.cloudinary.com/dcjlqkkfv/image/upload/v1741348901/revo/temperature_calc_app_ix1pph.webp);
+    background-size: 100% auto;
+    background-position: bottom 6.2rem right 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 50%;
+    filter: saturate(20%) blur(1.5px);
+    padding-bottom: var(--margin-btwn-sect);
+  }
+
+.project-btns {
+    margin: 3rem 0;
+}
+
+.project-btns .btn {
+    padding: 0.8rem 1.4rem;
+}
+
+.project-desc {
+    background-color: var(--color-main-bg);
+    margin-left: var(--margin-indent);
+}
+
+.project-desc img {
+    opacity: 70%;
+    height: auto;
+    width: 4.6rem;
+}
+
+.project-desc-tech {
+    filter: saturate(30%) blur(1px);
+    margin-top: var(--margin-btwn-text);
+}
+
+
+/* 🗃️section: Contact Section */
+
+.contact {
+    width: 90vw;
+    margin: 0 var(--margin-left-sect);
+    margin-bottom: 8rem;
+}
+
+.contact-form {
+    display: grid;
+    grid-column-gap: 1.2rem;
+    grid-row-gap: 1.2rem;
+    margin-bottom: calc(var(--margin-btwn-text) * 4);
+}
+
+.contact-form label {
+    width: 18rem;
+    margin: 0.8rem 0;
+}
+
+.contact-form-name, 
+.contact-form-email,
+.contact-form-message {
+    margin-left: 3.2rem;
+}
+
+.contact-form-btns {
+    text-align: right;
+}
+
+.contact-form-btns input {
+    margin-left: 1.2rem;
+}
+
+.contact-socials a {
+    display: block;
+    width: fit-content;
+}
+
+.contact-socials span {
+    display: inline-block;
+    width: 100%;
+}
+
+.footer {
+    color: var(--color-dim);
+    margin-left: var(--margin-left-sect);
+    margin-bottom: 5.5rem;
+}
+
+/* above 480 */
+@media only screen and (min-width: 480px){
+    .navbar-menu{
+        width: 34.2rem;
+    }
+
+    .home {
+        width: 55%;
+    }
+
+    .project-list {
+        width: 52rem;
+    }
+
+    .project::before { 
+        background-size: 80% auto;
+        background-position: bottom 6.2rem right 0.8rem;
+        padding: 0;
+    }
+
+    .contact-form {
+        grid-template-columns: min-content 26rem;
+        grid-template-rows: 3.2rem 3.2rem 6.4rem 3.2rem;
+    }
+
+    .contact-form-btns {
+        grid-area: 4 / 2 / 4 / 3;
+    }
+
+    .contact-form-name, 
+    .contact-form-email,
+    .contact-form-message {
+        margin-left: 0;
+    }
+}
+
+/* above 768 */
+@media only screen and (min-width: 768px) {
+    .about-container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+    h2 {
+        width: 40rem;
+    }
+
+    .about-text {
+        width: 65%;
+        margin-right: 2.4rem;
+    }
+
+    .project-list {
+        width: 50%;
+    }
+
+    .contact-socials span, .contact-socials a{
+        display: inline-block;
+        width: fit-content;
+    }
+}
