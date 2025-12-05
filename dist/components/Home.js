@@ -12,11 +12,16 @@ class AppHome extends BaseComponent {
 			<div class="home-container">
 				<h2 class="home-tagline">Fullstack Dev/ </br>
 				Game Dev</h2>
-				<div class="home-loading-container">
+				<div class="home-loading-container-mobile">
+					<span class="home-loading-bit">>></span>
+					<span class="home-loading-bit">>></span>
+					<p class="home-loading-bar">[~~~~~~~~~]</p>
+				</div>
+				<div class="home-loading-container-desktop">
 					<span class="home-loading-bit">>></span>
 					<span class="home-loading-bit">>></span>
 					<span class="home-loading-bit">>></span>
-					<p class="home-loading-bar">[~~~~~~~~~~~~~~]</p>
+					<p class="home-loading-bar">[~~~~~~~~~~~~~]</p>
 				</div>
 
 				<div class="home-text">

@@ -1,21 +1,28 @@
 .home {
   border: solid 0.1rem;
-  height: 90vh;
+  min-height: 88vh;
   margin-top: 1.6rem;
 }
 
-.home-title h1 {
-  font-weight: 100;
-  font-size: var(--font-size-title);
-  width: 100%;
-  letter-spacing: -0.25rem;
+.home-title {
+  overflow-wrap: break-word;
+  font-size: 16vw;
+  line-height: 16vw;
   text-align: center;
-  line-height: 10vw;
+  letter-spacing: -0.25rem;
+  margin: 5rem 0;
+}
+
+.home-tagline {
+  font-size: 2.4rem;
 }
 
 .home-container {
   margin: 0 var(--padding-content);
-  margin-top: 12rem;
+}
+
+.home-loading-container-desktop {
+  display: none;
 }
 
 .home-loading-bit {
@@ -23,7 +30,7 @@
   opacity: 90%;
   left: 2.8rem;
   background-color: var(--color-main-bg);
-  animation: sliding 0.7s steps(4, end) 0s infinite forwards;
+  animation: bit-slide 0.7s steps(4, end) 0s infinite forwards;
 }
 
 .home-loading-bit:nth-child(2) {
@@ -33,7 +40,7 @@
   left: 15.6rem;
 }
 
-@keyframes sliding {
+@keyframes bit-slide {
   0% {
     transform: translateX(calc(var(--padding-content) + 1.2rem));
   }
@@ -43,10 +50,29 @@
 }
 
 .home-loading-bar {
-  margin: 4.2rem 0;
+  margin-top: 1.2rem;
+}
+
+.home-text {
+  margin-top: 6rem;
 }
 
 .home-text p {
-  /* font-weight: 800; */
   margin: 1.2rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-title {
+    font-size: var(--font-size-title);
+    line-height: var(--font-size-title);
+    margin-left: 1.1rem;
+  }
+
+  .home-loading-container-mobile {
+    display: none;
+  }
+
+  .home-loading-container-desktop {
+    display: block;
+  }
 }
