@@ -45,7 +45,7 @@
 }
 
 .cursor-anim {
-  animation: blink 2s ease 0s infinite normal forwards;
+  animation: blink 2s steps(1, end) 0s infinite normal forwards;
 }
 
 @keyframes blink {
