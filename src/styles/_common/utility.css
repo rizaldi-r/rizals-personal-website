@@ -60,3 +60,16 @@
     opacity: 0;
   }
 }
+
+.mobile-break {
+  display: block;
+}
+
+@media only screen and (min-width: 480px) {
+	.mobile-break {
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+}

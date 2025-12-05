@@ -1,9 +1,7 @@
 import { BaseComponent } from './_common/BaseComponent.js';
-
 class AppAbout extends BaseComponent {
-
-	template(): string {
-		return /*html*/`
+    template() {
+        return /*html*/ `
 		<link rel="stylesheet" href="src/styles/About.css" />
 		<link rel="stylesheet" href="src/styles/_common/utility.css" />
 		<section id="about" class="about">
@@ -25,10 +23,8 @@ class AppAbout extends BaseComponent {
 				</div>
 			</div>
 		</section>
-		`
-	}
-
-	addEventListeners(): void { }
+		`;
+    }
+    addEventListeners() { }
 }
-
 customElements.define('app-about', AppAbout);
