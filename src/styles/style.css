@@ -155,113 +155,12 @@ input[type="text"], input[type="email"], textarea {
 /* 🗃️SECT: Navigation Bar */
 
 /* BUG: little gap at bottom */
-.navbar {
-    position: fixed;
-    pointer-events: none;
-    z-index: 1;
-    bottom: 0;
-    width: 100%;
-    color: var(--color-main-bg);
-    opacity: 95%;
-}
-
-.navbar-bar {
-    display: flex;
-    height: 5.5rem;
-    width: 100%;
-    font-size: 2.4rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar-bar span {
-    box-sizing: border-box;
-    background-color: var(--color-main);
-    height: 100%;
-    padding: 1.6rem 1.3rem;
-}
-
-.navbar-bar-empty {
-    width: 100%;
-    height: 50%;
-    margin: 0 0.8rem;
-}
-
-.navbar-bar-burger {
-    all: unset;
-    height: 100%;
-    aspect-ratio : 1 / 1;
-    background-color: red;
-}
-
-.navbar-bar, .navbar-menu {
-    pointer-events:initial;
-}
-
-.navbar-menu {
-    display: none;
-    box-sizing: border-box;
-    list-style-type: none;
-    background-color: var(--color-main);
-    height: 27.6rem;
-    width: 100%;
-    padding: 0.8rem 0 3.2rem 0;
-    margin-bottom: 0.8rem;
-    margin-left: auto;
-}
-
-.navbar-menu li {
-    text-decoration: none;
-    margin-left: 2rem;
-    margin-top: 1.6rem;  
-}
 
 .navbar-menu li a {
     display: block;
     text-decoration: none;
     font-size: 2.4rem;
     color: var(--color-main-bg);
-}
-
-/* menu toggler logic */
-.menu-toggler {
-    z-index: 1;
-    width: 100%;
-    opacity: 0;
-}
-
-.menu-toggler-label {
-    display: block;
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    background-color: var(--color-main);
-    padding: 1.6rem 0;
-}
-
-body:has(.menu-toggler:checked) {
-    & .navbar-menu {
-        display: block;
-    }
-}
-
-.navbar-blur div {
-    z-index: 2;
-    position: fixed;
-    height: 8.8rem;
-    width: 100%;
-}
-
-.navbar-blur-top {
-    top: 0;
-    background: var(--color-navbar-blur-top);
-    backdrop-filter: blur(2.5px);
-}
-
-.navbar-blur-btm {
-    bottom: 0;
-    background: var(--color-navbar-blur-btm);
-    backdrop-filter: blur(1px);
 }
 
 /* 🗃️SECT: Home Section */

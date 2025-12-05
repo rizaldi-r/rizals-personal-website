@@ -4,57 +4,30 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
-	<meta name="title" content="Muhammad Rizaldi Ramli - Fullstack Developer" />
+	<meta name="title" content="Rizaldi Ramli - Fullstack Developer" />
 	<meta name="description" content="Hi! I'm Rizaldi, eager to bring creative ideas to life through code." />
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://revou-fsse-feb25.github.io/milestone-1-rizaldi-r/" />
-	<meta property="og:title" content="Muhammad Rizaldi Ramli - Aspiring Fullstack Developer" />
+	<meta property="og:title" content="Rizaldi Ramli - Aspiring Fullstack Developer" />
 	<meta property="og:description" content="Hi! I'm Rizaldi, eager to bring creative ideas to life through code." />
 	<meta property="og:image" content="" />
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content="https://revou-fsse-feb25.github.io/milestone-1-rizaldi-r/" />
-	<meta property="twitter:title" content="Muhammad Rizaldi Ramli - Aspiring Fullstack Developer" />
+	<meta property="twitter:title" content="Rizaldi Ramli - Aspiring Fullstack Developer" />
 	<meta property="twitter:description" content="Hi! I'm Rizaldi, eager to bring creative ideas to life through code." />
 	<meta property="twitter:image" content="" />
 
-	<title>Muhammad Rizaldi Ramli</title>
+	<title>Rizaldi Ramli</title>
 	<link rel="stylesheet" href="src/styles/style.css" />
+
 </head>
 
 <body>
-	<header>
-		<!-- Section: Navigation Bar -->
-		<nav class="navbar">
-			<ul class="navbar-menu">
-				<li class="hover-right"><a href="#home">> HOME</a></li>
-				<li class="hover-right"><a href="#about">> ABOUT</a></li>
-				<li class="hover-right">
-					<a href="#project">> PROJECT</a>
-				</li>
-				<li class="hover-right">
-					<a href="#contact">> CONTACT</a>
-				</li>
-			</ul>
-			<div class="navbar-bar">
-				<span class="navbar-bar-logo">zal.</span>
-				<span class="navbar-bar-empty"></span>
-				<!-- <span class="navbar-bar-burger"></span> -->
-				<button class="navbar-bar-burger">
-					<label class="menu-toggler-label" for="menu-toggler">▧</label>
-					<input class="menu-toggler" id="menu-toggler" type="checkbox" />
-				</button>
-			</div>
-		</nav>
-
-		<div class="navbar-blur">
-			<div class="navbar-blur-top"></div>
-			<!-- <div class="navbar-blur-btm"></div> -->
-		</div>
-	</header>
+	<app-navbar></app-navbar>
 
 	<main>
 		<!-- Section: Home Section -->
@@ -67,19 +40,17 @@
 
 			<h2 class="home-tagline">Aspiring Fullstack Developer</h2>
 			<div class="home-loading-container">
-				<span class="home-loading-bit">\\</span>
-				<span class="home-loading-bit">\\</span>
-				<span class="home-loading-bit">\\</span>
+				<span class="home-loading-bit">>></span>
+				<span class="home-loading-bit">>></span>
+				<span class="home-loading-bit">>></span>
 				<p class="home-loading">[~~~~~~~~~~~~~~]</p>
 			</div>
 
 			<div class="home-text">
 				<p>
-					> Hi there! I'm Rizal, eager to bring creative ideas to
-					life through code.
+					> I create stuff through code.
 				</p>
-				<p>> Scroll to continue...</p>
-				<p>> <span class="cursor-anim">█</span></p>
+				<p>> <span class="cursor-anim">██</span></p>
 			</div>
 		</section>
 
@@ -245,8 +216,64 @@
 	</main>
 
 	<footer class="footer">
-		<p>&copy; Muhammad Rizaldi Ramli 2025</p>
+		<p>&copy; Rizaldi Ramli 2025</p>
 	</footer>
+
+	<script type="module" src="dist/components/navbar.js"></script>
+	<script>
+		// class AppNavbar extends HTMLElement {
+		// 	constructor() {
+		// 		super();
+		// 		this.attachShadow({ mode: 'open' });
+		// 	}
+
+		// 	connectedCallback() {
+		// 		this.render();
+		// 		this.setupMobileMenu();
+		// 	}
+
+		// 	setupMobileMenu() {
+		// 		// Note: Without CSS, this logic exists but won't be visually obvious
+		// 		const toggle = this.shadowRoot.getElementById('menu-toggler');
+		// 		const menu = this.shadowRoot.querySelector('.navbar-menu');
+
+		// 		if (toggle && menu) {
+		// 			toggle.addEventListener('change', (e) => {
+		// 				if (e.target.checked) {
+		// 					menu.style.display = 'block';
+		// 				} else {
+		// 					menu.style.display = '';
+		// 				}
+		// 			});
+		// 		}
+		// 	}
+
+		// 	render() {
+		// 		// Pure HTML Structure
+		// 		this.shadowRoot.innerHTML = `
+    //       <!-- No <style> tag here -->
+    //       <nav class="navbar">
+    //         <div class="navbar-bar">
+    //           <span class="navbar-bar-logo">zal.</span>
+    //         </div>
+            
+    //         <ul class="navbar-menu">
+    //           <li class="hover-right"><a href="#home">> HOME</a></li>
+    //           <li class="hover-right"><a href="#about">> ABOUT</a></li>
+    //           <li class="hover-right"><a href="#project">> PROJECT</a></li>
+    //           <li class="hover-right"><a href="#contact">> CONTACT</a></li>
+    //         </ul>
+
+    //         <div class="navbar-bar-burger">
+    //           <label class="menu-toggler-label" for="menu-toggler">▧</label>
+    //           <input class="menu-toggler" id="menu-toggler" type="checkbox" />
+    //         </div>
+    //       </nav>
+    //     `;
+		// 	}
+		// }
+		// customElements.define('app-navbar', AppNavbar);
+	</script>
 </body>
 
 </html>
