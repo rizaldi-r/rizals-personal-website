@@ -4,7 +4,7 @@
   --font-family: "Sixtyfour", sans-serif;
   --font-size-root: 62.5%; /* (10px) for easier rem calculation*/
   --font-size-reguler: 1.6rem; /* (16px) actual font size */
-  --font-size-title: 5.2rem;
+  --font-size-title: 4.6vw;
   --color-main: #a8a3ff;
   --color-main-bg: #1e1e1e;
   --color-secondary-bg: #252238;
@@ -38,11 +38,6 @@ li {
   display: block;
 }
 
-/* todo: move this to the navbat section*/
-input[type="radio"] {
-  display: none;
-}
-
 /* --- apply new default style ---*/
 
 html {
@@ -71,10 +66,6 @@ a {
   color: var(--color-main);
 }
 
-/* a:hover {
-    color: yellow;
-} */
-
 input[type="text"],
 input[type="email"],
 textarea {
@@ -90,71 +81,6 @@ textarea {
   font-size: 1.2rem;
   color: var(--color-main);
   opacity: 0.5;
-}
-
-/* --- utils --- */
-
-.btn,
-.btn-action {
-  all: unset;
-  cursor: pointer;
-  text-align: center;
-  padding: 0.4rem 1.4em;
-}
-
-.btn {
-  color: var(--color-light);
-  background-color: var(--color-btn-bg);
-  border: var(--border);
-}
-
-.btn-action {
-  color: var(--color-main-bg);
-  background-color: var(--color-main);
-}
-
-.btn:hover {
-  background-color: #323f43;
-}
-
-.btn-action:hover {
-  background-color: #9a95f3;
-}
-
-.radio-active {
-  all: unset;
-  cursor: pointer;
-  text-align: center;
-  color: var(--color-main-bg);
-  background-color: var(--color-main);
-  border: none;
-  padding: 1.6rem;
-}
-
-/* & nesting selector might not work in older devices or browsers */
-.hover-right:hover {
-  transform: translateX(1.6rem);
-  background-color: var(--color-main-bg);
-  & * {
-    color: var(--color-main);
-  }
-}
-
-.cursor-anim {
-  animation: blink 2s ease 0s infinite normal forwards;
-}
-
-@keyframes blink {
-  0%,
-  50%,
-  100% {
-    opacity: 1;
-  }
-
-  25%,
-  75% {
-    opacity: 0;
-  }
 }
 
 /* 🗃️SECT: Navigation Bar */

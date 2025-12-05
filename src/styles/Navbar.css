@@ -14,7 +14,7 @@ nav {
 }
 
 .scrollbar {
-  width: 2.6rem;
+  width: var(--width-scrollbar);
   height: 100%;
   background-color: var(--color-secondary-bg);
   margin-bottom: 1.2rem;
