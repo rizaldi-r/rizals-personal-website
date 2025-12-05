@@ -39,8 +39,8 @@ main {
 h2 {
   font-size: 3.2rem;
   line-height: 3.2rem;
-  padding-top: 2.6rem;
-  margin-bottom: 6rem;
+  /* padding-top: 2.6rem; */
+  /* margin-bottom: 6rem; */
 }
 
 a {

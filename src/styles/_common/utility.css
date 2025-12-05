@@ -1,3 +1,16 @@
+.sub-heading {
+	margin-bottom: var(--padding-content);
+}
+
+.section {
+	box-sizing: border-box;
+  min-height: 90vh;
+  border: solid 0.1rem;
+  margin: var(--margin-btwn-sect) 0;
+  padding: var(--padding-content);
+  padding-bottom: 5rem;
+}
+
 .btn,
 .btn-action {
   all: unset;

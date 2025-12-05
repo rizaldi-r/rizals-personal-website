@@ -6,8 +6,8 @@ class AppAbout extends BaseComponent {
 		return /*html*/`
 		<link rel="stylesheet" href="src/styles/About.css" />
 		<link rel="stylesheet" href="src/styles/_common/utility.css" />
-		<section id="about" class="about">
-			<h2 class="about-title">Where it all began<span class="mobile-break">...</span>
+		<section id="about" class="about section">
+			<h2 class="about-title sub-heading">Where it all began<span class="mobile-break">...</span>
 			</h2>
 			<div class="about-container">
 				<div class="about-text">
