@@ -1,0 +1,43 @@
+.home {
+    /* margin-left: var(--margin-left-sect); */
+    margin-bottom: calc(var(--margin-btwn-sect) / 1);
+		border: solid 0.1rem 
+    /* height: 100vh; */
+    /* min-height: fit-content; */
+}
+
+.home-title {
+    font-size: var(--font-size-title);
+    letter-spacing: -0.25rem;
+    line-height: 6.4rem;
+}
+
+.home-loading-bit {
+    position: absolute;
+    opacity: 90%;
+    left: 2.8rem;
+    background-color: var(--color-main-bg);
+    animation: sliding 0.7s steps(6, end) 0s infinite forwards;
+}
+
+.home-loading-bit:nth-child(2) { left: 9.2rem; }
+.home-loading-bit:nth-child(3) { left: 15.6rem; }
+
+@keyframes sliding {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(6.4rem);
+	}
+}
+
+
+.home-loading {
+    margin: 4.2rem 0;
+}
+
+.home-text p {
+    margin: 1.2rem 0;
+}
