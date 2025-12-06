@@ -38,82 +38,7 @@
 		<app-about id="about"></app-about>
 
 		<!-- Section: Project -->
-		<section id="project" class="project">
-			<h2>Things I've Made...</h2>
-
-			<div class="project-btns">
-				<input id="apps" type="radio" name="project-option" value="apps" />
-				<label class="radio-active" for="apps">APPS</label>
-
-				<input id="games" type="radio" name="project-option" value="games" />
-				<label class="btn" for="games">GAMES</label>
-			</div>
-
-			<ul class="project-list">
-				<!-- Sub-section: Project 1 -->
-				<li>
-					<h3 class="hover-right">
-						<a href="https://revou-fundamental-course.github.io/30-sept-24-Rizaldi-R/" target="_blank">
-							>> Productive YT (WIP)
-						</a>
-					</h3>
-					<div class="project-desc">
-						<p>
-							> Lorem ipsum dolor sit amet consectetur
-							adipisicing elit.
-						</p>
-						<p>> Tech Stack:</p>
-						<div class="project-desc-tech">
-							<img src="./assets/images/html_logo.webp" alt="html 5 logo" />
-							<img src="./assets/images/css_logo.webp" alt="css logo" />
-							<img src="./assets/images/js_logo.webp" alt="javascript logo" />
-						</div>
-					</div>
-				</li>
-				<!-- Sub-section: Project 2 -->
-				<li>
-					<h3 class="hover-right">
-						<a href="https://revou-fundamental-course.github.io/30-sept-24-Rizaldi-R/" target="_blank">
-							>> Ratecamp (WIP)
-						</a>
-					</h3>
-					<div class="project-desc">
-						<p>
-							> Lorem ipsum dolor sit amet consectetur
-							adipisicing elit. Alias fugit repellendus illo,
-							ut, esse, id molestias officiis.
-						</p>
-						<p>> Tech Stack:</p>
-						<div class="project-desc-tech">
-							<img src="./assets/images/html_logo.webp" alt="html 5 logo" />
-							<img src="./assets/images/css_logo.webp" alt="css logo" />
-							<img src="./assets/images/js_logo.webp" alt="javascript logo" />
-						</div>
-					</div>
-				</li>
-				<!-- Sub-section: Project 3 -->
-				<li>
-					<h3 class="hover-right">
-						<a href="https://revou-fundamental-course.github.io/30-sept-24-Rizaldi-R/" target="_blank">
-							>> Temperature Calculator
-						</a>
-					</h3>
-					<div class="project-desc">
-						<p>
-							> A calculator that simplifies temperature
-							conversions between Celsius, Fahrenheit, Kelvin,
-							and Rankine scales.
-						</p>
-						<p>> Tech Stack:</p>
-						<div class="project-desc-tech">
-							<img src="./assets/images/html_logo.webp" alt="html 5 logo" />
-							<img src="./assets/images/css_logo.webp" alt="css logo" />
-							<img src="./assets/images/js_logo.webp" alt="javascript logo" />
-						</div>
-					</div>
-				</li>
-			</ul>
-		</section>
+		<app-project id="project"></app-project>
 
 		<!-- Section: Contact -->
 		<section id="contact" class="contact">
@@ -177,6 +102,7 @@
 	<script type="module" src="dist/components/Navbar.js"></script>
 	<script type="module" src="dist/components/Home.js"></script>
 	<script type="module" src="dist/components/About.js"></script>
+	<script type="module" src="dist/components/Project.js"></script>
 </body>
 
 </html>

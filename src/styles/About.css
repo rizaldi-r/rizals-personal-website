@@ -1,12 +1,3 @@
-#about {
-	/* margin: auto; */
-	/* width: fit-content; */
-}
-
-.about-title {
-  max-width: 40rem;
-}
-
 .about-container {
   display: flex;
   flex-direction: column;
