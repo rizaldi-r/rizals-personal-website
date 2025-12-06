@@ -1,0 +1,78 @@
+.home {
+  border: solid 0.1rem;
+  min-height: 88vh;
+  margin-top: 1.6rem;
+}
+
+.home-title {
+  overflow-wrap: break-word;
+  font-size: 16vw;
+  line-height: 16vw;
+  text-align: center;
+  letter-spacing: -0.25rem;
+  margin: 6rem 0 10rem 0;
+}
+
+.home-tagline {
+  font-size: 2.4rem;
+}
+
+.home-container {
+  margin: 0 var(--padding-content);
+}
+
+.home-loading-container-desktop {
+  display: none;
+}
+
+.home-loading-bit {
+  position: absolute;
+  opacity: 90%;
+  left: 2.8rem;
+  background-color: var(--color-main-bg);
+  animation: bit-slide 0.7s steps(4, end) 0s infinite forwards;
+}
+
+.home-loading-bit:nth-child(2) {
+  left: 9.2rem;
+}
+.home-loading-bit:nth-child(3) {
+  left: 15.6rem;
+}
+
+@keyframes bit-slide {
+  0% {
+    transform: translateX(calc(var(--padding-content) + 1.2rem));
+  }
+  100% {
+    transform: translateX(calc(var(--padding-content) + 7.6rem));
+  }
+}
+
+.home-loading-bar {
+  margin-top: 1.2rem;
+}
+
+.home-text {
+  margin-top: 6rem;
+}
+
+.home-text p {
+  margin: 1.2rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-title {
+    font-size: var(--font-size-title);
+    line-height: var(--font-size-title);
+    margin-left: 1.1rem;
+  }
+
+  .home-loading-container-mobile {
+    display: none;
+  }
+
+  .home-loading-container-desktop {
+    display: block;
+  }
+}

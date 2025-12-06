@@ -1,0 +1,89 @@
+.sub-heading {
+	margin: 3.8rem 0;
+	margin-bottom: var(--padding-content);
+}
+
+.section {
+	box-sizing: border-box;
+  min-height: 90vh;
+  border: solid 0.1rem;
+  margin: var(--margin-btwn-sect) 0;
+  padding: var(--padding-content);
+  padding-bottom: 5rem;
+}
+
+.btn,
+.btn-action {
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.4rem 1.4em;
+}
+
+.btn {
+  color: var(--color-light);
+  background-color: var(--color-btn-bg);
+  border: var(--border);
+}
+
+.btn-action {
+  color: var(--color-main-bg);
+  background-color: var(--color-main);
+}
+
+.btn:hover {
+  background-color: #323f43;
+}
+
+.btn-action:hover {
+  background-color: #9a95f3;
+}
+
+.radio-active {
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+  color: var(--color-main-bg);
+  background-color: var(--color-main);
+  border: none;
+  padding: 1.6rem;
+}
+
+/* & nesting selector might not work in older devices or browsers */
+.hover-right:hover {
+  transform: translateX(1.6rem);
+  background-color: var(--color-main-bg);
+  & * {
+    color: var(--color-main);
+  }
+}
+
+.cursor-anim {
+  animation: blink 2s steps(1, end) 0s infinite normal forwards;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.mobile-break {
+  display: block;
+}
+
+@media only screen and (min-width: 480px) {
+	.mobile-break {
+    display: inline;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+}
