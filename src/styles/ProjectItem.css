@@ -1,0 +1,27 @@
+.project-desc {
+  margin-left: 4.8rem;
+}
+
+.project-img{
+	opacity: 70%;
+	height: 20rem;
+	max-width: 45rem;
+}
+
+.project-img img{
+	height: 100%;
+	width: auto;
+	margin: auto;
+}
+
+.project-text {
+  position: relative;
+  margin-top: -4rem;
+}
+
+.project-text p {
+  display: inline;
+  background-color: var(--color-main-bg);
+	padding: 0.8rem 0;
+	padding-right: 1.6rem;
+}

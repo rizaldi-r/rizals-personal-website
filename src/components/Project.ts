@@ -1,4 +1,5 @@
 import { BaseComponent } from './_common/BaseComponent.js';
+import './ProjectItem.js';
 
 class AppProject extends BaseComponent {
 
@@ -11,22 +12,19 @@ class AppProject extends BaseComponent {
 
 			<ul class="project-list">
 				<!-- Sub-section: Project 1 -->
-				<li>
-					<h3 class="hover-right">
-						<a href="https://campjam.vercel.app/" target="_blank">
-							>> Campjam
-						</a>
-					</h3>
-					<div class="project-desc">
-						<div class="project-img img-zoom-container">
-							<img src="./src/assets/campjam.png" alt="campjam screenshot">
-						</div>
-						<div class="project-text">
-							<p>> Tech Stack:</p></br>
-							<p>HTML, CSS, JS</p>
-						</div>
-					</div>
-				</li>
+				<app-project-item 
+					title="Campjam"
+					link="https://campjam.vercel.app/"
+					img-src="./src/assets/campjam.png"
+					tech-stack="Next.js, Nest.js, Typescript, Tailwind"
+				></app-project-item> 
+
+				<app-project-item 
+					title="Revobank Backend"
+					link="#"
+					img-src="..."
+					tech-stack="Nest.js, Typescript"
+				></app-project-item> 
 			</ul>
 		</section>
 		`;
