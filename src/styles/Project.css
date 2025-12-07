@@ -25,10 +25,6 @@
     white-space: nowrap;
   }
 
-  .project-title:hover {
-    transform: translate(0.8rem, 0);
-  }
-
   .project-devider {
     width: 1rem;
     word-break: break-word;

@@ -62,7 +62,6 @@
   padding: 1.6rem;
 }
 
-/* & nesting selector might not work in older devices or browsers */
 .hover-right:hover {
   transform: translateX(1.6rem);
   background-color: var(--color-main-bg);

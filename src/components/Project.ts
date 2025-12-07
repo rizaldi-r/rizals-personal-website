@@ -58,7 +58,7 @@ class AppProject extends BaseComponent {
 
 		const projectItemsDesktop = this.projects.map((p, index) => /*html*/`
 			<li>
-				<h3 class="project-title ${index === 0 ? 'active' : ''}" data-index="${index}">
+				<h3 class="project-title hover-right ${index === 0 ? 'active' : ''}" data-index="${index}">
 					<a
 						href="${p.link}"
 						target="_blank">
