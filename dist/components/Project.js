@@ -69,6 +69,7 @@ class AppProject extends BaseComponent {
 				${projectItemsMobile}
 			</ul>
 
+			<!-- TODO: make new component for desktop -->
 			<div class="project-container-desktop">
 				<!-- List of Titles -->
 				<ul class="project-list">
