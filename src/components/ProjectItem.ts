@@ -15,6 +15,7 @@ export class AppProjectItem extends BaseComponent {
 
 		return /*html*/`
 				<link rel="stylesheet" href="src/styles/ProjectItem.css" />
+				<link rel="stylesheet" href="src/styles/_common/utility.css" />
 				<style>
 					.project-img img {
 						transform: scale(${zoomScale});

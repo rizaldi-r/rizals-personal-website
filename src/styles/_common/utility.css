@@ -13,6 +13,18 @@
   padding-bottom: 5rem;
 }
 
+.img-zoom-container {
+  overflow: hidden;
+}
+
+.img-zoom-container img {
+  display: block;
+  opacity: 25%;
+  transform-origin: top;
+	transform: scale(1.2);
+	filter: saturate(20%) contrast(40%);
+}
+
 .btn,
 .btn-action {
   all: unset;
