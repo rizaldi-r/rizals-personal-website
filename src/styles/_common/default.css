@@ -26,7 +26,7 @@ html {
 
 body {
   max-width: 1440px;
-	margin: auto;
+  margin: auto;
   font-size: var(--font-size-reguler);
   color: var(--color-main);
   background: var(--color-main-bg);
@@ -34,8 +34,9 @@ body {
 }
 
 main {
-  margin-right: calc(var(--width-scrollbar) + 1.6rem);
-  margin-left: 1.6rem;
+  margin-left: var(--margin-around-main);
+  margin-right: calc(var(--width-scrollbar) + var(--margin-around-main));
+  margin-bottom: calc(var(--navbar-height) + var(--margin-around-main));
 }
 
 h2 {

@@ -14,61 +14,13 @@
   --color-btn-bg: #3a484f;
   --width-scrollbar: 2.6rem;
 	--padding-content: 5.2rem;
+	--margin-around-main: 1.6rem;
   --margin-btwn-sect: -0.6rem;
+	--navbar-height: 5.8rem;
 
   --border: var(--color-border) solid 1px;
   --color-navbar-blur-top: linear-gradient(var(--color-main-bg), #00000000);
   --color-navbar-blur-btm: linear-gradient(to top, var(--color-main-bg), #00000000);
-}
-
-/* 🗃️section: Contact Section */
-
-.contact {
-  width: 90vw;
-  margin: 0 var(--margin-left-sect);
-  margin-bottom: 8rem;
-}
-
-.contact-form {
-  display: grid;
-  grid-column-gap: 1.2rem;
-  grid-row-gap: 1.2rem;
-  margin-bottom: calc(var(--margin-btwn-text) * 4);
-}
-
-.contact-form label {
-  width: 18rem;
-  margin: 0.8rem 0;
-}
-
-.contact-form-name,
-.contact-form-email,
-.contact-form-message {
-  margin-left: 3.2rem;
-}
-
-.contact-form-btns {
-  text-align: right;
-}
-
-.contact-form-btns input {
-  margin-left: 1.2rem;
-}
-
-.contact-socials a {
-  display: block;
-  width: fit-content;
-}
-
-.contact-socials span {
-  display: inline-block;
-  width: 100%;
-}
-
-.footer {
-  color: var(--color-dim);
-  margin-left: var(--margin-left-sect);
-  margin-bottom: 5.5rem;
 }
 
 /* above 480 */
