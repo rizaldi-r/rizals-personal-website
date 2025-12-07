@@ -1,4 +1,5 @@
 .sub-heading {
+  max-width: 40rem;
 	margin: 3.8rem 0;
 	margin-bottom: var(--padding-content);
 }
@@ -10,6 +11,18 @@
   margin: var(--margin-btwn-sect) 0;
   padding: var(--padding-content);
   padding-bottom: 5rem;
+}
+
+.img-zoom-container {
+  overflow: hidden;
+}
+
+.img-zoom-container img {
+  display: block;
+  opacity: 25%;
+  transform-origin: top;
+	transform: scale(1.2);
+	filter: saturate(20%) contrast(40%);
 }
 
 .btn,
@@ -49,7 +62,6 @@
   padding: 1.6rem;
 }
 
-/* & nesting selector might not work in older devices or browsers */
 .hover-right:hover {
   transform: translateX(1.6rem);
   background-color: var(--color-main-bg);

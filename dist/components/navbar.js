@@ -46,13 +46,10 @@ class AppNavbar extends BaseComponent {
                 const topPercent = (scrollTop / docHeight) * 100;
                 scrollbarThumb.style.height = `${heightPercent}%`;
                 scrollbarThumb.style.transform = `translateY(${topPercent}vh)`;
-                // Note: using vh relative to viewport, or use % if parent is fixed height
-                // Best approach for fixed container:
                 scrollbarThumb.style.top = `${topPercent}%`;
             };
             window.addEventListener('scroll', updateScrollbar);
             window.addEventListener('resize', updateScrollbar);
-            // Call once immediately to set initial state
             updateScrollbar();
         }
     }

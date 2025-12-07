@@ -1,0 +1,41 @@
+#contact {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.6rem;
+}
+
+.contact-container {
+  display: flex;
+	flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.footer {
+  margin-top: auto;
+  color: var(--color-dim);
+}
+
+.contact-devider {
+	font-size: 2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 60rem;
+  letter-spacing: 0.4rem;
+  margin-top: 8rem;
+  opacity: 0.8;
+}
+
+.loop-dot {
+  display: inline-block;
+  animation: slide-right 1s steps(1) infinite;
+  /* transform: translateX(-2rem); */
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-2rem);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}

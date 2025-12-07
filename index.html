@@ -38,145 +38,17 @@
 		<app-about id="about"></app-about>
 
 		<!-- Section: Project -->
-		<section id="project" class="project">
-			<h2>Things I've Made...</h2>
-
-			<div class="project-btns">
-				<input id="apps" type="radio" name="project-option" value="apps" />
-				<label class="radio-active" for="apps">APPS</label>
-
-				<input id="games" type="radio" name="project-option" value="games" />
-				<label class="btn" for="games">GAMES</label>
-			</div>
-
-			<ul class="project-list">
-				<!-- Sub-section: Project 1 -->
-				<li>
-					<h3 class="hover-right">
-						<a href="https://revou-fundamental-course.github.io/30-sept-24-Rizaldi-R/" target="_blank">
-							>> Productive YT (WIP)
-						</a>
-					</h3>
-					<div class="project-desc">
-						<p>
-							> Lorem ipsum dolor sit amet consectetur
-							adipisicing elit.
-						</p>
-						<p>> Tech Stack:</p>
-						<div class="project-desc-tech">
-							<img src="./assets/images/html_logo.webp" alt="html 5 logo" />
-							<img src="./assets/images/css_logo.webp" alt="css logo" />
-							<img src="./assets/images/js_logo.webp" alt="javascript logo" />
-						</div>
-					</div>
-				</li>
-				<!-- Sub-section: Project 2 -->
-				<li>
-					<h3 class="hover-right">
-						<a href="https://revou-fundamental-course.github.io/30-sept-24-Rizaldi-R/" target="_blank">
-							>> Ratecamp (WIP)
-						</a>
-					</h3>
-					<div class="project-desc">
-						<p>
-							> Lorem ipsum dolor sit amet consectetur
-							adipisicing elit. Alias fugit repellendus illo,
-							ut, esse, id molestias officiis.
-						</p>
-						<p>> Tech Stack:</p>
-						<div class="project-desc-tech">
-							<img src="./assets/images/html_logo.webp" alt="html 5 logo" />
-							<img src="./assets/images/css_logo.webp" alt="css logo" />
-							<img src="./assets/images/js_logo.webp" alt="javascript logo" />
-						</div>
-					</div>
-				</li>
-				<!-- Sub-section: Project 3 -->
-				<li>
-					<h3 class="hover-right">
-						<a href="https://revou-fundamental-course.github.io/30-sept-24-Rizaldi-R/" target="_blank">
-							>> Temperature Calculator
-						</a>
-					</h3>
-					<div class="project-desc">
-						<p>
-							> A calculator that simplifies temperature
-							conversions between Celsius, Fahrenheit, Kelvin,
-							and Rankine scales.
-						</p>
-						<p>> Tech Stack:</p>
-						<div class="project-desc-tech">
-							<img src="./assets/images/html_logo.webp" alt="html 5 logo" />
-							<img src="./assets/images/css_logo.webp" alt="css logo" />
-							<img src="./assets/images/js_logo.webp" alt="javascript logo" />
-						</div>
-					</div>
-				</li>
-			</ul>
-		</section>
+		<app-project id="project"></app-project>
 
 		<!-- Section: Contact -->
-		<section id="contact" class="contact">
-			<h2>Let's Connect <span>*</span></h2>
-			<form action="" method="post" class="contact-form">
-				<!-- Sub-section: Name -->
-				<label for="name">> Name :</label>
-				<input id="name" class="contact-form-name" type="text" name="name" placeholder="Enter your name" required />
-
-				<!-- Sub-section: Email -->
-				<label for="email">> Email :</label>
-				<input id="email" class="contact-form-email" type="email" name="email" placeholder="Enter your email"
-					required />
-
-				<!-- Sub-section: Message -->
-				<label for="message">> Message :</label>
-				<textarea id="message" class="contact-form-message" name="message" placeholder="Share your thoughts"
-					required></textarea>
-
-				<div class="contact-form-btns">
-					<input type="submit" class="btn-action" value="Send" /><input type="reset" class="btn" value="Reset" />
-				</div>
-			</form>
-
-			<!-- Sub-section: Social -->
-			<div class="contact-socials">
-				<p>>> Socials :</p>
-				<span class="hover-right">
-					<a target="_blank" href="mailto:m.rizaldi.ramli@gmail.com">
-						> Email
-					</a>
-				</span>
-				<span class="hover-right">
-					<a target="_blank" href="https://github.com/rizaldi-r">
-						> Github
-					</a>
-				</span>
-				<span class="hover-right">
-					<a target="_blank" href="https://www.linkedin.com/in/rizaldi-ramli/">
-						> Linkdn
-					</a>
-				</span>
-				<span class="hover-right">
-					<a target="_blank" href="https://www.instagram.com/">
-						> Instagram
-					</a>
-				</span>
-				<span class="hover-right">
-					<a target="_blank" href="https://www.pinterest.com/">
-						> Pinterest
-					</a>
-				</span>
-			</div>
-		</section>
+		<app-contact id="contact"></app-contact>
 	</main>
-
-	<footer class="footer">
-		<p>&copy; Rizaldi Ramli 2025</p>
-	</footer>
 
 	<script type="module" src="dist/components/Navbar.js"></script>
 	<script type="module" src="dist/components/Home.js"></script>
 	<script type="module" src="dist/components/About.js"></script>
+	<script type="module" src="dist/components/Project.js"></script>
+	<script type="module" src="dist/components/Contact.js"></script>
 </body>
 
 </html>
