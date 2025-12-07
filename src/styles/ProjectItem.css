@@ -1,17 +1,29 @@
 .project-desc {
   margin-left: 4.8rem;
+  max-width: 35rem;
 }
 
-.project-img{
-	opacity: 70%;
-	height: 20rem;
-	max-width: 45rem;
+.img-zoom-container {
+  overflow: hidden;
+  display: block;
 }
 
-.project-img img{
-	height: 100%;
-	width: auto;
-	margin: auto;
+.img-zoom-container img {
+  opacity: 25%;
+  display: block;
+  transform-origin: top;
+	filter: saturate(20%) contrast(40%);
+}
+
+.project-img {
+  height: 15rem;
+  max-width: 30rem;
+}
+
+.project-img img {
+  height: 100%;
+  width: auto;
+  margin: auto;
 }
 
 .project-text {
@@ -22,6 +34,6 @@
 .project-text p {
   display: inline;
   background-color: var(--color-main-bg);
-	padding: 0.8rem 0;
-	padding-right: 1.6rem;
+  padding: 0.8rem 0;
+  padding-right: 1.6rem;
 }
