@@ -1,4 +1,4 @@
-import { BaseComponent } from './_common/BaseComponent.js';
+import { BaseComponent } from './common/BaseComponent.js';
 
 export class AppProjectItem extends BaseComponent {
 
@@ -15,7 +15,7 @@ export class AppProjectItem extends BaseComponent {
 
 		return /*html*/`
 				<link rel="stylesheet" href="src/styles/ProjectItem.css" />
-				<link rel="stylesheet" href="src/styles/_common/utility.css" />
+				<link rel="stylesheet" href="src/styles/common/utility.css" />
 				<style>
 					.project-img img {
 						transform: scale(${zoomScale});

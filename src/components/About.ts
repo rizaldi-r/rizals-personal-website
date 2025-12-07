@@ -1,11 +1,11 @@
-import { BaseComponent } from './_common/BaseComponent.js';
+import { BaseComponent } from './common/BaseComponent.js';
 
 class AppAbout extends BaseComponent {
 
 	template(): string {
 		return /*html*/`
 		<link rel="stylesheet" href="src/styles/About.css" />
-		<link rel="stylesheet" href="src/styles/_common/utility.css" />
+		<link rel="stylesheet" href="src/styles/common/utility.css" />
 		<section id="about" class="about section">
 			<h2 class="about-title sub-heading">Where it all began<span class="mobile-break">...</span>
 			</h2>

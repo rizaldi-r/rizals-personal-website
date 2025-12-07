@@ -1,4 +1,4 @@
-import { BaseComponent } from './_common/BaseComponent.js';
+import { BaseComponent } from './common/BaseComponent.js';
 import './ProjectItem.js';
 
 interface ProjectData {
@@ -72,7 +72,7 @@ class AppProject extends BaseComponent {
 
 		return /*html*/`
 		<link rel="stylesheet" href="src/styles/Project.css" />
-		<link rel="stylesheet" href="src/styles/_common/utility.css" />
+		<link rel="stylesheet" href="src/styles/common/utility.css" />
 		<section id="project" class="project section">
 			<h2 class="sub-heading">Things I've Made...</h2>
 

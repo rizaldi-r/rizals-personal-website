@@ -1,4 +1,4 @@
-import { BaseComponent } from './_common/BaseComponent.js';
+import { BaseComponent } from './common/BaseComponent.js';
 class AppNavbar extends BaseComponent {
     template() {
         return /*html*/ `

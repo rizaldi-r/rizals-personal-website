@@ -1,4 +1,4 @@
-import { BaseComponent } from './_common/BaseComponent.js';
+import { BaseComponent } from './common/BaseComponent.js';
 
 interface SocialLink {
 	title: string;
@@ -18,7 +18,7 @@ class AppContact extends BaseComponent {
 	template(): string {
 		return /*html*/`
 		<link rel="stylesheet" href="src/styles/Contact.css" />
-		<link rel="stylesheet" href="src/styles/_common/utility.css" />
+		<link rel="stylesheet" href="src/styles/common/utility.css" />
 		
 		<section id="contact" class="contact section">
 			<div class="contact-container">

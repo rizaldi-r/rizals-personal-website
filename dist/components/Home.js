@@ -1,9 +1,9 @@
-import { BaseComponent } from './_common/BaseComponent.js';
+import { BaseComponent } from './common/BaseComponent.js';
 class AppHome extends BaseComponent {
     template() {
         return /*html*/ `
 		<link rel="stylesheet" href="src/styles/Home.css" />
-		<link rel="stylesheet" href="src/styles/_common/utility.css" />
+		<link rel="stylesheet" href="src/styles/common/utility.css" />
 		<section class="home">
 			<div class="home-title">
 				<h1>Rizaldi R.</h1>

@@ -29,7 +29,7 @@ export class BaseComponent<S = Record<string, any>> extends HTMLElement {
         if (!this.shadowRoot) return;
 
         this.shadowRoot.innerHTML = /*html*/`
-						<link rel="stylesheet" href="src/styles/_common/default.css" />
+						<link rel="stylesheet" href="src/styles/common/default.css" />
             ${this.template()}
         `;
         this.addEventListeners();
