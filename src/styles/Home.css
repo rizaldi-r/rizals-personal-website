@@ -19,17 +19,23 @@
 
 .home-container {
   margin: 0 var(--padding-content);
+	margin-bottom: var(--padding-content);
+}
+
+.home-loading-container-mobile {
+	opacity: 0.8;
 }
 
 .home-loading-container-desktop {
   display: none;
+	opacity: 0.8;
 }
 
 .home-loading-bit {
   display: inline-block;
   opacity: 90%;
   background-color: var(--color-main-bg);
-  animation: bit-slide 0.7s steps(6, end) 0s infinite forwards;
+  animation: bit-slide 0.7s steps(4, end) 0s infinite forwards;
 }
 
 .home-loading-bit:nth-child(3) {

@@ -27,8 +27,8 @@
 }
 
 .wave-text {
-  display: inline-block;
-  animation: slide-left 4s steps(22) infinite;
+  display: block;
+  animation: slide-left 2s steps(8) infinite;
 }
 
 @keyframes slide-left {
@@ -36,7 +36,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-6.4rem);
   }
 }
 
