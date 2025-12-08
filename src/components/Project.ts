@@ -90,9 +90,10 @@ class AppProject extends BaseComponent {
 
 				<!-- Devider -->
 				<span class="project-devider">
-				IIIIIIIIIIIIIIII
+				♥...♥...♥.♥.♥...♥...♥
+				.♥.♥...♥...♥.♥.♥...♥...♥
 				</span>
-					
+				
 				<!-- Preview Area -->
 				<div class="project-preview" id="project-preview">
 					${this.renderPreview(activeProject)}

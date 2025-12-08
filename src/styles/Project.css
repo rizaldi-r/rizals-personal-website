@@ -26,23 +26,40 @@
   }
 
   .project-devider {
-    width: 1rem;
+    width: 6rem;
     word-break: break-word;
-    margin: 0 8rem;
+    padding: 0 5.2rem;
   }
 
   .project-preview {
-    width: 70%;
-    position: sticky;
     top: 2rem;
+  }
+
+  @keyframes blurReveal {
+    0% {
+      filter: blur(4px);
+    }
+    100% {
+      filter: blur(0);
+    }
   }
 
   .preview-img-container {
     width: 40rem;
     height: 25rem;
+    animation: blurReveal 1s linear;
   }
 
+  @keyframes flashReveal {
+    0% {
+      filter: brightness(3) saturate(20%) contrast(40%);
+    }
+    100% {
+      filter: brightness(1) saturate(20%) contrast(40%);
+    }
+  }
   .preview-img {
+    animation: flashReveal 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
     width: 100%;
   }
 
