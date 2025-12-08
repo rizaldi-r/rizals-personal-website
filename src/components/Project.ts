@@ -89,10 +89,13 @@ class AppProject extends BaseComponent {
 				</ul>
 
 				<!-- Devider -->
-				<span class="project-devider">
-				♥...♥...♥.♥.♥...♥...♥
-				.♥.♥...♥...♥.♥.♥...♥...♥
-				</span>
+				<div class="devider-container">
+					<span class="devider-text">
+					♥...♥...♥.♥.♥...♥...♥
+					.♥.♥...♥...♥.♥.♥...♥...♥.♥.♥...♥...♥.♥.♥...♥...♥
+					.♥.♥...♥...♥.♥.♥...♥...♥
+					</span>
+				</div>
 				
 				<!-- Preview Area -->
 				<div class="project-preview" id="project-preview">
