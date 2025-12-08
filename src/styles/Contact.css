@@ -28,7 +28,6 @@
 .loop-dot {
   display: inline-block;
   animation: slide-right 1s steps(1) infinite;
-  /* transform: translateX(-2rem); */
 }
 
 @keyframes slide-right {

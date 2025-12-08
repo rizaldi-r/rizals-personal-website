@@ -25,30 +25,63 @@
     white-space: nowrap;
   }
 
-  .project-devider {
-    width: 1rem;
+  @keyframes scroll-down {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-11.2rem);
+    }
+  }
+
+  .devider-container {
+    overflow: hidden;
+    height: 42rem;
+    width: 6rem;
+    margin: 0 5.6rem;
+		opacity: 0.7;
+  }
+
+  .devider-text {
+		display: block;
     word-break: break-word;
-    margin: 0 8rem;
+		animation: scroll-down 2s steps(4) infinite;
   }
 
   .project-preview {
-    width: 70%;
-    position: sticky;
     top: 2rem;
+  }
+
+  @keyframes blurReveal {
+    0% {
+      filter: blur(4px);
+    }
+    100% {
+      filter: blur(0);
+    }
   }
 
   .preview-img-container {
     width: 40rem;
     height: 25rem;
+    animation: blurReveal 1s linear;
   }
 
+  @keyframes flashReveal {
+    0% {
+      filter: brightness(3) saturate(20%) contrast(40%);
+    }
+    100% {
+      filter: brightness(1) saturate(20%) contrast(40%);
+    }
+  }
   .preview-img {
+    animation: flashReveal 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
     width: 100%;
   }
 
   .preview-desc {
     position: relative;
-    z-index: 1;
     width: 40rem;
     margin-top: -4rem;
   }
