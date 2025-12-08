@@ -5,7 +5,7 @@ class AppNavbar extends BaseComponent {
 			<link rel="stylesheet" href="src/styles/Navbar.css" />
       <nav>
 				<div class="navbar">
-					<ul class="navbar-menu">
+					<ul class="navbar-menu" style="display:block;">
 						<li><a href="#home">> HOME</a></li>
 						<li><a href="#about">> ABOUT</a></li>
 						<li><a href="#project">> PROJECT</a></li>
@@ -30,6 +30,7 @@ class AppNavbar extends BaseComponent {
         if (burger && menu) {
             burger.addEventListener('click', () => {
                 const isVisible = menu.style.display === 'block';
+                console.log("🚀 ~ isVisible:", isVisible);
                 if (isVisible)
                     menu.style.display = 'none';
                 else
