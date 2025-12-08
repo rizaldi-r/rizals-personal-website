@@ -82,7 +82,6 @@
 
   .preview-desc {
     position: relative;
-    z-index: 1;
     width: 40rem;
     margin-top: -4rem;
   }
