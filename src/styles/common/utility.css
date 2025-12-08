@@ -62,12 +62,10 @@
   padding: 1.6rem;
 }
 
-.hover-right:hover {
+.hover-right-container:hover .hover-right{
+	display: inline-block;
   transform: translateX(1.6rem);
-  background-color: var(--color-main-bg);
-  & * {
-    color: var(--color-main);
-  }
+	background-color: var(--color-secondary-bg);
 }
 
 .cursor-anim {
