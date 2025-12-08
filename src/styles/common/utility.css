@@ -63,7 +63,7 @@
 }
 
 .hover-right-container:hover .hover-right{
-	display: inline-block;
+	display: block;
   transform: translateX(1.6rem);
 	background-color: var(--color-secondary-bg);
 }

@@ -28,11 +28,11 @@ class AppContact extends BaseComponent {
 				
 				<div class="contact-socials">
 					${this.socials.map(social => /*html*/`
-						<p class="hover-right-container">
-							<a class="hover-right" target="_blank" href="${social.link}">
+						<a class="hover-right-container" target="_blank" href="${social.link}">
+							<p class="hover-right">
 								> ${social.title}
-							</a>
-						</p>
+							</p>
+						</a>
 					`).join('')}
 				</div>
 			</div>

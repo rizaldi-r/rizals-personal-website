@@ -3,7 +3,7 @@ nav {
   position: fixed;
   display: flex;
   align-items: flex-end;
-	width: 100%;
+  width: 100%;
   max-width: var(--width-body);
   height: 100%;
   bottom: 0;
@@ -27,7 +27,7 @@ nav {
 }
 
 .navbar-container {
-	box-sizing: border-box;
+  box-sizing: border-box;
   display: flex;
   gap: 0.6rem;
   height: var(--navbar-height);
@@ -74,14 +74,18 @@ nav {
   box-shadow: 0 0 0 0.6rem var(--color-main-bg);
 }
 
-.navbar-menu li a {
+.navbar-menu a {
+  display: block;
   pointer-events: auto;
+}
+
+.navbar-menu a li {
   display: inline-block;
-  width: 100%;
+  /* width: 100%; */
   color: var(--color-secondary-bg);
   text-decoration: none;
 }
 
-.navbar-menu li:hover {
-  transform: translate(0.4rem, 0);
+.navbar-menu a:hover li {
+  transform: translate(0.8rem, 0);
 }
