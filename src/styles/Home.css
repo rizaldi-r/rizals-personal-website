@@ -26,28 +26,33 @@
 }
 
 .home-loading-bit {
-  /* position: absolute; */
+	display: inline-block;
   opacity: 90%;
-  left: 2.8rem;
+  /* margin-left: 2.8rem; */
   background-color: var(--color-main-bg);
-  animation: bit-slide 0.7s steps(4, end) 0s infinite forwards;
+  animation: bit-slide 0.7s steps(6, end) 0s infinite forwards;
 }
 
-.home-loading-bit:nth-child(2) {
-  left: 9.2rem;
-}
 .home-loading-bit:nth-child(3) {
-  left: 15.6rem;
+  margin: 0 2rem;
 }
 
 @keyframes bit-slide {
   0% {
-    transform: translateX(calc(var(--padding-content) + 1.2rem));
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(6.8rem);
+  }
+}
+/* @keyframes bit-slide {
+  0% {
+    transform: translateX(calc(var(--padding-content)));
   }
   100% {
     transform: translateX(calc(var(--padding-content) + 7.6rem));
   }
-}
+} */
 
 .home-loading-bar {
   margin-top: 1.2rem;
