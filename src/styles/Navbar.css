@@ -3,7 +3,8 @@ nav {
   position: fixed;
   display: flex;
   align-items: flex-end;
-  width: 100%;
+	width: 100%;
+  max-width: var(--width-body);
   height: 100%;
   bottom: 0;
   z-index: 1;
