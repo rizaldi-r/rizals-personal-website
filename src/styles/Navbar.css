@@ -46,7 +46,7 @@ nav:before {
 }
 
 .scrollbar-thumb {
-  height: calc();
+  /* height: calc(); */
   background-color: var(--color-main);
 }
 
