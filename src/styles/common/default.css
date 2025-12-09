@@ -70,6 +70,7 @@ main {
   padding-top: calc(var(--padding-main-y));
   padding-bottom: calc(var(--navbar-height) + var(--padding-main-y) + 0rem);
   background: var(--color-main-bg);
+	filter: blur(1px);
 }
 
 h2 {
