@@ -1,14 +1,38 @@
 nav {
+  box-sizing: border-box;
   pointer-events: none;
   position: fixed;
   display: flex;
   align-items: flex-end;
   width: 100%;
   max-width: var(--width-body);
-  height: 100%;
-  bottom: 0;
+  height: 98%;
+  top: 1%;
   z-index: 1;
+  border-radius: 1rem;
+  padding: var(--height-computer-frame) var(--width-computer-frame);
+  box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.8), 0px 0px 0px 6rem var(--color-computer),
+    0px 0px 2px 6.1rem rgb(43, 43, 43);
 }
+
+nav:before {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: var(--height-computer-frame) var(--width-computer-frame);
+  background: linear-gradient(
+    to bottom right,
+    #1b2114 0%,
+    #4b4e38 49%,
+    #c0baa7 51%,
+    #d5d5c7 90%,
+    #e3dbd5 100%
+  );
+  border-radius: inherit;
+  mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
+}
+/* 0.384turn, */
 
 .navbar {
   width: 100%;
