@@ -5,12 +5,11 @@ nav {
   display: flex;
   align-items: flex-end;
   width: 100%;
-  max-width: var(--width-body);
   height: 98%;
+  max-width: var(--width-body);
   top: 1%;
   z-index: 1;
-  border-radius: 1rem;
-  padding: var(--height-computer-frame) var(--width-computer-frame);
+  padding: var(--height-computer-frame) 0rem;
   box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.8), 0px 0px 0px 6rem var(--color-computer),
     0px 0px 2px 6.1rem rgb(43, 43, 43);
 }
@@ -20,7 +19,7 @@ nav:before {
   content: "";
   position: absolute;
   inset: 0;
-  padding: var(--height-computer-frame) var(--width-computer-frame);
+  padding: var(--height-computer-frame) 0rem;
   background: linear-gradient(
     to bottom right,
     #1b2114 0%,
@@ -46,7 +45,6 @@ nav:before {
 }
 
 .scrollbar-thumb {
-  /* height: calc(); */
   background-color: var(--color-main);
 }
 
@@ -112,4 +110,23 @@ nav:before {
 
 .navbar-menu a:hover li {
   transform: translate(0.8rem, 0);
+}
+
+@media only screen and (min-width: 480px) {
+  nav {
+    padding: var(--height-computer-frame) var(--width-computer-frame);
+    margin: 0 1%;
+    width: 98%;
+    border-radius: 1rem;
+  }
+
+  nav:before {
+    padding: var(--height-computer-frame) var(--width-computer-frame);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  nav {
+    margin: 0;
+  }
 }

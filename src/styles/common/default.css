@@ -17,8 +17,9 @@
   --width-scrollbar: 2.6rem;
   --color-computer: #c0baa7;
   --padding-content: 5.2rem;
-  --padding-main-x: calc(var(--width-computer-frame) + 1.6rem);
-  --padding-main-y: calc(var(--height-computer-frame) + 1.6rem);
+  --padding-main-x-mobile: 1.6rem;
+  --padding-main-x: calc(var(--width-computer-frame) + 2rem);
+  --padding-main-y: calc(var(--height-computer-frame) + 2rem);
   --margin-btwn-sect: -0.6rem;
   --width-body: calc(1024px + 2 * var(--width-computer-frame));
   --navbar-height: 5.8rem;
@@ -60,18 +61,14 @@ body {
   font-size: var(--font-size-reguler);
   color: var(--color-main);
   line-height: 2.8rem;
-  background: radial-gradient(
-    circle,
-    rgba(192, 186, 167) 60%,
-    rgba(128, 120, 106, 1) 150%
-  );
+  background: radial-gradient(circle, rgba(192, 186, 167) 60%, rgba(128, 120, 106, 1) 150%);
 }
 
 main {
-  padding-left: var(--padding-main-x);
-  padding-right: calc(var(--width-scrollbar) + var(--padding-main-x));
-  padding-top: calc(var(--padding-main-y) - 0.8rem);
-  padding-bottom: calc(var(--navbar-height) + var(--padding-main-y) + 0.8rem);
+  padding-left: var(--padding-main-x-mobile);
+  padding-right: calc(var(--padding-main-x-mobile) + var(--width-scrollbar));
+  padding-top: calc(var(--padding-main-y));
+  padding-bottom: calc(var(--navbar-height) + var(--padding-main-y) + 0rem);
   background: var(--color-main-bg);
 }
 
@@ -99,4 +96,11 @@ textarea {
   font-size: 1.2rem;
   color: var(--color-main);
   opacity: 0.5;
+}
+
+@media only screen and (min-width: 480px) {
+  main {
+    padding-left: var(--padding-main-x);
+    padding-right: calc(var(--width-scrollbar) + var(--padding-main-x));
+  }
 }
