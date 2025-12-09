@@ -6,7 +6,7 @@
 
 .section {
 	box-sizing: border-box;
-  min-height: 90vh;
+  min-height: 80vh;
   border: solid 0.1rem;
   margin: var(--margin-btwn-sect) 0;
   padding: var(--padding-content);

@@ -1,17 +1,55 @@
 nav {
+  box-sizing: border-box;
   pointer-events: none;
   position: fixed;
   display: flex;
   align-items: flex-end;
   width: 100%;
+  height: 98%;
   max-width: var(--width-body);
-  height: 100%;
-  bottom: 0;
+  top: 1%;
   z-index: 1;
+  padding: var(--height-computer-frame) 0rem;
+  box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.8), 0px 0px 0px 6rem var(--color-computer),
+    0px 0px 2px 6.1rem rgb(43, 43, 43);
+}
+
+nav:before {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: var(--height-computer-frame) 0rem;
+  background: linear-gradient(
+    to bottom right,
+    #1b2114 0%,
+    #4b4e38 49%,
+    #c0baa7 51%,
+    #d5d5c7 90%,
+    #e3dbd5 100%
+  );
+  border-radius: inherit;
+  mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
+}
+
+nav:after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+	bottom: -8.4rem;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+	background:
+  radial-gradient(ellipse 60% 10% at top, #bfa1e431, transparent);
+  /* mix-blend-mode: color-dodge; */
+  /* background-color: #857996; */
+  /* backdrop-filter: blur(1px); */
 }
 
 .navbar {
   width: 100%;
+	filter: blur(1.2px);
 }
 
 .scrollbar {
@@ -22,7 +60,6 @@ nav {
 }
 
 .scrollbar-thumb {
-  height: calc();
   background-color: var(--color-main);
 }
 
@@ -88,4 +125,23 @@ nav {
 
 .navbar-menu a:hover li {
   transform: translate(0.8rem, 0);
+}
+
+@media only screen and (min-width: 480px) {
+  nav {
+    padding: var(--height-computer-frame) var(--width-computer-frame);
+    margin: 0 1%;
+    width: 98%;
+    border-radius: 1rem;
+  }
+
+  nav:before {
+    padding: var(--height-computer-frame) var(--width-computer-frame);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  nav {
+    margin: 0;
+  }
 }

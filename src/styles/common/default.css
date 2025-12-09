@@ -1,3 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour:BLED,SCAN@0..100,-53..100&display=swap");
+
+:root {
+  --font-family: "Sixtyfour", sans-serif;
+  --font-size-root: 62.5%; /* (10px) for easier rem calculation*/
+  --font-size-reguler: 1.6rem; /* (16px) actual font size */
+  --font-size-title: 16.4rem;
+  --color-main: #a8a3ff;
+  --color-main-bg: #1b1a21;
+  --color-secondary-bg: #252238;
+  --color-light: #cacaca;
+  --color-dim: #999999;
+  --color-border: #616161;
+  --color-btn-bg: #3a484f;
+  --width-computer-frame: 3.2rem;
+  --height-computer-frame: 3.2rem;
+  --width-scrollbar: 2.6rem;
+  --color-computer: #c0baa7;
+  --padding-content: 5.2rem;
+  --padding-main-x-mobile: 1.6rem;
+  --padding-main-x: calc(var(--width-computer-frame) + 2rem);
+  --padding-main-y: calc(var(--height-computer-frame) + 2rem);
+  --margin-btwn-sect: -0.6rem;
+  --width-body: calc(1024px + 2 * var(--width-computer-frame));
+  --navbar-height: 5.8rem;
+
+  --border: var(--color-border) solid 1px;
+  --color-navbar-blur-top: linear-gradient(var(--color-main-bg), #00000000);
+  --color-navbar-blur-btm: linear-gradient(to top, var(--color-main-bg), #00000000);
+}
+
 /* --- remove default style --- */
 
 body,
@@ -29,14 +60,17 @@ body {
   margin: auto;
   font-size: var(--font-size-reguler);
   color: var(--color-main);
-  background: var(--color-main-bg);
   line-height: 2.8rem;
+  background: radial-gradient(circle, rgba(192, 186, 167) 60%, rgba(128, 120, 106, 1) 150%);
 }
 
 main {
-  margin-left: var(--margin-around-main);
-  margin-right: calc(var(--width-scrollbar) + var(--margin-around-main));
-  margin-bottom: calc(var(--navbar-height) + var(--margin-around-main));
+  padding-left: var(--padding-main-x-mobile);
+  padding-right: calc(var(--padding-main-x-mobile) + var(--width-scrollbar));
+  padding-top: calc(var(--padding-main-y));
+  padding-bottom: calc(var(--navbar-height) + var(--padding-main-y) + 0rem);
+  background: var(--color-main-bg);
+	filter: blur(1px);
 }
 
 h2 {
@@ -63,4 +97,11 @@ textarea {
   font-size: 1.2rem;
   color: var(--color-main);
   opacity: 0.5;
+}
+
+@media only screen and (min-width: 480px) {
+  main {
+    padding-left: var(--padding-main-x);
+    padding-right: calc(var(--width-scrollbar) + var(--padding-main-x));
+  }
 }

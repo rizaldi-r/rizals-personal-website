@@ -27,6 +27,7 @@ class AppNavbar extends BaseComponent {
         const burger = this.shadowRoot.querySelector('.navbar-burger');
         const menu = this.shadowRoot.querySelector('.navbar-menu');
         const scrollbarThumb = this.shadowRoot.querySelector('.scrollbar-thumb');
+        const scrollbarContainer = this.shadowRoot.querySelector('.scrollbar');
         if (burger && menu) {
             burger.addEventListener('click', () => {
                 const isVisible = menu.style.display === 'block';
@@ -39,14 +40,17 @@ class AppNavbar extends BaseComponent {
         if (scrollbarThumb) {
             const updateScrollbar = () => {
                 const doc = document.documentElement;
-                const scrollTop = window.scrollY || doc.scrollTop;
+                const scrollTop = window.scrollY;
                 const docHeight = doc.scrollHeight;
                 const winHeight = doc.clientHeight;
+                const containerHeight = scrollbarContainer.clientHeight;
                 const heightPercent = (winHeight / docHeight) * 100;
-                const topPercent = (scrollTop / docHeight) * 100;
                 scrollbarThumb.style.height = `${heightPercent}%`;
-                scrollbarThumb.style.transform = `translateY(${topPercent}vh)`;
-                scrollbarThumb.style.top = `${topPercent}%`;
+                const thumbHeightPx = (heightPercent / 100) * containerHeight;
+                const availableSpace = containerHeight - thumbHeightPx;
+                const scrollRatio = scrollTop / (docHeight - winHeight);
+                const translateY = scrollRatio * availableSpace;
+                scrollbarThumb.style.transform = `translateY(${translateY}px)`;
             };
             window.addEventListener('scroll', updateScrollbar);
             window.addEventListener('resize', updateScrollbar);
