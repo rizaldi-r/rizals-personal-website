@@ -1,1 +1,1 @@
-# rizals-personal-website
+# rizal's-personal-website
